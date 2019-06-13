@@ -1,0 +1,14 @@
+.card-img {
+  border: 20px solid red;
+  border-radius: 50px;
+  padding: 5%;
+}
+
+.card-text {
+  margin-bottom: 0px;
+}
+
+.tag-label {
+  color: blue;
+  margin-right: 5px;
+}
