@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import Enlarge from "./components/enlarge";
+import Input from "./components/input";
 
 class App extends Component {
   apiEndpoint = "https://www.hatchways.io/api/assessment/students";
@@ -111,19 +112,15 @@ class App extends Component {
 
     return (
       <div>
-        <input
+        <Input
           name="search"
-          id="search"
-          className="form-control"
           placeholder="Search by name"
           value={searchQuery}
           onChange={this.handleChange}
         />
-        <input
+        <Input
           name="searchTag"
-          id="searchTag"
-          className="form-control"
-          placeholder="Search by name"
+          placeholder="Search by tag"
           value={searchTag}
           onChange={this.handleChange}
         />
@@ -152,14 +149,15 @@ class App extends Component {
 
                   {student.showScore &&
                     student.tags.map(tag => (
-                      <label className="tag-label">{tag}</label>
+                      // <label className="tag-label">{tag}</label>
+                      <span class="badge badge-secondary tag-label">
+                        <h5> {tag}</h5>
+                      </span>
                     ))}
 
                   {student.showScore && (
-                    <input
+                    <Input
                       name="addtag"
-                      id="addtag"
-                      className="form-control"
                       placeholder="Add a tag"
                       value={students.newtag}
                       onChange={event => this.addtag(event, student)}

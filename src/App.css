@@ -1,6 +1,6 @@
 .card-img {
-  border: 20px solid red;
-  border-radius: 50px;
+  border: 5px solid gray;
+  border-radius: 50% !important;
   padding: 5%;
 }
 
@@ -11,4 +11,5 @@
 .tag-label {
   color: blue;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
